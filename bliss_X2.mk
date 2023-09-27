@@ -11,6 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common Bliss stuff.
 $(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from X2 device
 $(call inherit-product, device/realme/X2/device.mk)
