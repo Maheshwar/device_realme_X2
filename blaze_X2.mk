@@ -9,14 +9,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Blaze stuff.
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
 # Inherit from X2 device
 $(call inherit-product, device/realme/X2/device.mk)
 
+# Blaze Official Stuff
+BLAZE_BUILD_TYPE := UNOFFICIAL
+BLAZE_MAINTAINER := Maheshwar
+TARGET_BOOT_ANIMATION_RES := 1080
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_NOT_USES_BLUR := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_X2
+PRODUCT_NAME := blaze_X2
 PRODUCT_DEVICE := X2
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme X2
